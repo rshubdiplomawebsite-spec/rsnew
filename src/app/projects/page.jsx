@@ -98,13 +98,13 @@ const StudyMaterialShowcase = () => {
               </div>
 
               <a
-                href="https://chat.whatsapp.com/BaYThHd1Kvt9VfyEfVB9Ur"
+                href="https://whatsapp.com/channel/0029VaUTY3p4CrfpY1DEPq2M"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-6 flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-[#25D366] to-[#1ebe5d] px-4 py-3 font-bold text-white"
               >
                 <MessageCircle size={18} />
-                Common Group
+                whatsapp channel
               </a>
             </div>
           </aside>
