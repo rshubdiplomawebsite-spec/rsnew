@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+:root {
+  --blue: #1a56ff;
+  --purple: #7c3aed;
+  --gold: #f59e0b;
+  --dark: #0a0a1a;
+  --darker: #050510;
+  --muted: #a0aec0;
+  --card-bg: rgba(255, 255, 255, 0.04);
+  --border: rgba(255, 255, 255, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--darker);
+  color: white;
+  overflow-x: hidden;
+  font-family: "DM Sans", Arial, sans-serif;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.4;
+}
+
+.font-display {
+  font-family: "Syne", Arial, sans-serif;
+}
+
+.rs-shell {
+  background:
+    radial-gradient(circle at top left, rgba(26, 86, 255, 0.2), transparent 34rem),
+    radial-gradient(circle at top right, rgba(124, 58, 237, 0.16), transparent 30rem),
+    var(--darker);
+}
+
+.rs-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(10px);
+  border-radius: 8px;
+}
+
+.rs-gradient-text {
+  background: linear-gradient(135deg, var(--blue), var(--purple));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
