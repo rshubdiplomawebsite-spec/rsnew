@@ -71,13 +71,13 @@ export default function ContactPage() {
 
       <section className="mx-auto mt-10 max-w-5xl">
         <a
-          href="https://chat.whatsapp.com/BaYThHd1Kvt9VfyEfVB9Ur"
+          href="https://whatsapp.com/channel/0029VaUTY3p4CrfpY1DEPq2M"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center justify-center gap-3 rounded-lg bg-gradient-to-r from-[#25D366] to-[#1ebe5d] px-6 py-5 text-lg font-bold text-white shadow-lg shadow-green-950/30"
         >
           <MessageCircle size={22} />
-          Join Common WhatsApp Group
+          Join WhatsApp Channel
         </a>
       </section>
     </main>
