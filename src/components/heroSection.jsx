@@ -41,13 +41,13 @@ export default function Hero() {
               <ArrowRight size={18} />
             </Link>
             <a
-              href="https://chat.whatsapp.com/BaYThHd1Kvt9VfyEfVB9Ur"
+              href="https://whatsapp.com/channel/0029VaUTY3p4CrfpY1DEPq2M"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 rounded-lg border border-white/10 bg-white/5 px-6 py-4 font-bold text-white transition hover:-translate-y-1 hover:border-[#25D366]/40 hover:bg-[#25D366]/15"
             >
               <MessageCircle size={18} />
-              Join WhatsApp Group
+              Join WhatsApp channel
             </a>
           </div>
         </div>
