@@ -23,7 +23,7 @@ export default function Hero() {
           </div>
 
           <h1 className="font-display mb-5 max-w-4xl text-4xl font-extrabold leading-tight md:text-6xl">
-            Premium <span className="rs-gradient-text">study material</span> for JUT Diploma
+           Free & Premium <span className="rs-gradient-text">study material</span> for JUT Diploma
           </h1>
 
           <p className="mb-8 max-w-2xl text-base leading-8 text-gray-300 md:text-lg">
