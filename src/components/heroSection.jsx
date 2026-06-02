@@ -3,14 +3,28 @@ import Link from "next/link";
 import { ArrowRight, BookOpen, GraduationCap, MessageCircle } from "lucide-react";
 
 export default function Hero() {
-  const branches = [
-    "EE / EEE",
-    "Mechanical",
-    "Computer Science",
-    "ECE",
-    "Civil",
-    "Mining",
-    "Automobile",
+  const semesters = [
+    {
+      year: "🎓 1st Year",
+      items: [
+        { emoji: "📘", label: "1st Semester", slug: "1st-semester" },
+        { emoji: "📗", label: "2nd Semester", slug: "2nd-semester" },
+      ],
+    },
+    {
+      year: "🎓 2nd Year",
+      items: [
+        { emoji: "📙", label: "3rd Semester", slug: "3rd-semester" },
+        { emoji: "📕", label: "4th Semester", slug: "4th-semester" },
+      ],
+    },
+    {
+      year: "🎓 3rd Year",
+      items: [
+        { emoji: "📓", label: "5th Semester", slug: "5th-semester" },
+        { emoji: "📔", label: "6th Semester", slug: "6th-semester" },
+      ],
+    },
   ];
 
   return (
@@ -23,7 +37,7 @@ export default function Hero() {
           </div>
 
           <h1 className="font-display mb-5 max-w-4xl text-4xl font-extrabold leading-tight md:text-6xl">
-           Free & Premium <span className="rs-gradient-text">study material</span> for JUT Diploma
+            Premium <span className="rs-gradient-text">study material</span> for JUT Diploma
           </h1>
 
           <p className="mb-8 max-w-2xl text-base leading-8 text-gray-300 md:text-lg">
@@ -54,30 +68,60 @@ export default function Hero() {
 
         <div className="rs-card p-5">
           <div className="mb-5 flex items-center gap-3 border-b border-white/10 pb-4">
-            <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-[#f59e0b]/15 text-[#f59e0b]">
+            <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-gradient-to-br from-[#1a56ff]/20 to-[#7c3aed]/18 text-white">
               <BookOpen size={22} />
             </div>
             <div>
-              <h2 className="font-display text-xl font-bold">Branch Wise Material</h2>
-              <p className="text-sm text-gray-400">Notes, PYQs, PDFs, and videos</p>
+              <h2 className="font-display text-xl font-bold">JUT Diploma Study Material</h2>
+              <p className="text-sm text-gray-400">Semester-wise notes, PYQs, and resources for all branches.</p>
             </div>
           </div>
 
-          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-1">
-            {branches.map((branch) => (
-              <Link
-                href="/projects"
-                key={branch}
-                className="rounded-lg border border-white/10 bg-white/[0.04] px-4 py-3 font-semibold text-white transition hover:-translate-y-1 hover:border-white/20 hover:bg-white/[0.07]"
-              >
-                {branch}
-              </Link>
+          <div className="grid gap-4">
+            {semesters.map((group) => (
+              <div key={group.year} className="">
+                <div className="mb-2 flex items-center justify-between">
+                  <h3 className="font-semibold text-gray-200">{group.year}</h3>
+                </div>
+
+                <div className="grid gap-3 sm:grid-cols-2 md:grid-cols-3">
+                  {group.items.map((s) => (
+                    <Link
+                      href={`/projects?semester=${s.slug}`}
+                      key={s.slug}
+                      className="rs-card flex items-center gap-3 rounded-lg border border-white/8 bg-white/[0.03] p-3 text-sm font-semibold text-white transition transform hover:-translate-y-1 hover:shadow-lg"
+                    >
+                      <div className="flex h-10 w-10 items-center justify-center rounded-md bg-gradient-to-br from-[#1a56ff]/20 to-[#7c3aed]/18 text-white text-lg">
+                        {s.emoji}
+                      </div>
+                      <div className="flex-1">
+                        <div className="flex items-center justify-between gap-2">
+                          <span>{s.label}</span>
+                          <span className="rounded-full bg-white/6 px-2 py-0.5 text-xs font-medium text-gray-200">Free & Paid</span>
+                        </div>
+                        <p className="mt-1 text-xs text-gray-400">Notes, PYQs, PDFs, and curated resources</p>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              </div>
             ))}
           </div>
-          <p className="mt-5 rounded-lg border border-white/10 bg-white/[0.04] p-4 text-sm leading-6 text-gray-300">
-            Remaining subjects, notes, PDFs and important questions are updated
-            regularly for all branches.
+
+          <p className="mt-5 rounded-lg border border-white/10 bg-white/[0.03] p-4 text-sm leading-6 text-gray-300">
+            Free and premium study materials are updated regularly for all semesters and branches.
           </p>
+
+          <div className="mt-4 flex items-center gap-3">
+            <a
+              href="https://whatsapp.com/channel/0029VaUTY3p4CrfpY1DEPq2M"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-[#1a56ff] to-[#7c3aed] px-4 py-2 text-sm font-bold text-white shadow transition hover:scale-[1.01]"
+            >
+              Join WhatsApp Channel → Get Free Updates
+            </a>
+          </div>
         </div>
       </div>
     </section>
