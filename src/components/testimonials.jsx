@@ -14,7 +14,7 @@ const features = [
     title: "PYQ & Important Questions",
     icon: ClipboardList,
     description:
-      "Previous year questions and exam-focused questions arranged for branch-wise practice.",
+      "Previous year questions and exam-focused questions arranged for semester-wise practice.",
   },
   {
     title: "Video Guidance",
@@ -38,8 +38,8 @@ const Testimonials = () => {
           Everything a Diploma Student Needs
         </h2>
         <p className="text-gray-400 max-w-2xl mx-auto">
-          Branch-wise notes, PYQs, PDFs, videos, and instant access for focused
-          semester preparation.
+          Semester-wise notes, PYQs, PDFs, videos, and instant access for focused
+          diploma preparation.
         </p>
       </div>
 
