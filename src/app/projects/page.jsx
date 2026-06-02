@@ -48,7 +48,7 @@ const StudyMaterialShowcase = () => {
             Buy Study Material
           </h1>
           <p className="mx-auto max-w-2xl text-lg leading-8 text-gray-400">
-            Browse branch-wise notes, PDFs, PYQs, important questions, and video
+            Browse semester-wise notes, PDFs, PYQs, important questions, and video
             resources. Purchase once and access your material from your account.
           </p>
         </div>
