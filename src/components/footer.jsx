@@ -31,7 +31,7 @@ const Footer = () => {
             </Link>
             <p className="max-w-md leading-7 text-gray-400">
               RS Hub Study Material helps JUT Diploma students prepare with premium
-              notes, PYQs, important questions, videos, and branch-wise study
+              notes, PYQs, important questions, videos, and semester-wise study
               resources.
             </p>
             <div className="mt-6 flex gap-3">
