@@ -5,8 +5,9 @@ export function generateStaticParams() {
   return semesterCatalog.map((item) => ({ semester: item.slug }));
 }
 
-export default function SemesterRoute({ params }) {
-  const semester = semesterCatalog.find((item) => item.slug === params.semester);
+export default async function SemesterRoute({ params }) {
+  const { semester: semesterSlug } = await params;
+  const semester = semesterCatalog.find((item) => item.slug === semesterSlug);
 
   if (!semester) {
     notFound();
