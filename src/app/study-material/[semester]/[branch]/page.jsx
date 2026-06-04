@@ -10,14 +10,15 @@ export function generateStaticParams() {
   );
 }
 
-export default function BranchRoute({ params }) {
-  const semester = semesterCatalog.find((item) => item.slug === params.semester);
+export default async function BranchRoute({ params }) {
+  const { semester: semesterSlug, branch: branchSlug } = await params;
+  const semester = semesterCatalog.find((item) => item.slug === semesterSlug);
 
   if (!semester) {
     notFound();
   }
 
-  const branch = semester.branches.find((item) => item.slug === params.branch);
+  const branch = semester.branches.find((item) => item.slug === branchSlug);
 
   if (!branch) {
     notFound();
