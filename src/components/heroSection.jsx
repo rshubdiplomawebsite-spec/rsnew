@@ -90,7 +90,7 @@ export default function Hero() {
                 <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2">
                   {group.items.map((s) => (
                     <Link
-                      href={`/projects?semester=${s.slug}`}
+                      href={`/study-material/${s.slug}`}
                       key={s.slug}
                       className="rs-card group relative overflow-hidden rounded-xl border border-white/10 bg-gradient-to-br from-white/[0.05] to-white/[0.02] p-4 sm:p-5 transition-all duration-300 ease-out hover:border-white/20 hover:bg-gradient-to-br hover:from-[#1a56ff]/10 hover:to-[#7c3aed]/8 hover:shadow-2xl hover:shadow-blue-500/20 hover:-translate-y-2"
                     >
